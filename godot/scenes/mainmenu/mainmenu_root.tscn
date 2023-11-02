@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/mainmenu/header/logo/logo_frame_01.png" type="Texture" id=1]
+[ext_resource path="res://scenes/mainmenu/header/logo/SHDR_dancing_text.tres" type="Shader" id=2]
+[ext_resource path="res://scenes/mainmenu/mainmenu_root.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=21]
+shader = ExtResource( 2 )
+
+[node name="mainmenu_root" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="header_root" type="Node2D" parent="."]
+
+[node name="logo" type="Sprite" parent="header_root"]
+material = SubResource( 21 )
+position = Vector2( 240, 56 )
+texture = ExtResource( 1 )
