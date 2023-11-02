@@ -11,12 +11,16 @@ config_version=4
 [application]
 
 config/name="oneirism"
+run/main_scene="res://scenes/splash/splash_root.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=480
 window/size/height=270
+window/size/resizable=false
 
 [gui]
 

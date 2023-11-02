@@ -1,3 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/splash/splash_root.gd" type="Script" id=1]
+[ext_resource path="res://scenes/splash/splash_03.jpeg" type="Texture" id=2]
+[ext_resource path="res://scenes/splash/splash_01.jpeg" type="Texture" id=3]
+[ext_resource path="res://scenes/splash/splash_02.jpeg" type="Texture" id=4]
 
 [node name="splash_root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="black_underlay" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Splash01" type="Sprite" parent="."]
+position = Vector2( 240, 135 )
+texture = ExtResource( 3 )
+
+[node name="Splash02" type="Sprite" parent="."]
+position = Vector2( 240, 135 )
+texture = ExtResource( 4 )
+
+[node name="Splash03" type="Sprite" parent="."]
+position = Vector2( 240, 135 )
+texture = ExtResource( 2 )
+
+[node name="black_overlay" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+color = Color( 0, 0, 0, 1 )
