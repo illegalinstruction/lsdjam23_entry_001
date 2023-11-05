@@ -38,6 +38,8 @@ const SCREENWIPE_MAX_TICKS  : int   = 60;
 const TICKS_PER_SEC         : float = 48.0;
 const MAX_VOLUME            : int   = 8;
 const BGM_FADE_PER_TICK     : float = 0.933;
+const MAX_MOUSE_SENSITIVITY : int   = 15;
+const STICK_DEAD_ZONE       : float = 0.35;
 
 #file paths
 const DATA_BASE     : String = "user://below_data";
@@ -48,16 +50,16 @@ const SAVEGAME_PATH : String = DATA_BASE + "-savegame";
 const GRAVITY_ACCEL                 : float = 9.8 / TICKS_PER_SEC;
 const COEFF_OF_FRICTION             : float = 0.9975;
 const WALK_SPEED_ACCEL              : float = 1.6;
-const MAX_WALK_SPEED                : float = 450.0 / TICKS_PER_SEC;
-const MAX_RUN_SPEED                 : float = 850.0 / TICKS_PER_SEC;
+const MAX_WALK_SPEED                : float = 650.0 / TICKS_PER_SEC;
 const JUMP_INITIAL_VERT_SPEED       : float = 4.5;
-const JUMP_HORZ_REDUCTION_FACTOR    : float = 0.29;
+const JUMP_HORZ_REDUCTION_FACTOR    : float = 0.19;
 
 #--- VARS ----------------------------------------------------------------------
 # configuration
 var sfx_vol             : int   = 3;
 var music_vol           : int   = 3;
 var use_joystick        : bool  = true;
+var mouse_sensitivity   : int   = 5; # divided by 1000.0 inside the controller
 
 # BGM management
 var curr_bgm            : int   = 0;

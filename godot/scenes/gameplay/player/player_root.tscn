@@ -31,6 +31,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
 
 [node name="asplyr_jump" type="AudioStreamPlayer" parent="."]
 
-[node name="asplyr_hurt1" type="AudioStreamPlayer" parent="."]
-
-[node name="asplyr_hurt2" type="AudioStreamPlayer" parent="."]
+[node name="asplyr_use" type="AudioStreamPlayer" parent="."]
