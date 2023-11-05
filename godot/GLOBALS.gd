@@ -33,16 +33,25 @@
 extends Node
 
 #--- CONSTANTS -----------------------------------------------------------------
-const SCREENWIPE_MAX_TICKS : int = 60;
-const FPS : float = 48.0;
-const GRAVITY : float = 9.8 / FPS;
-const COEFF_OF_FRICTION : float =  0.9975;
-const MAX_VOLUME : int = 8;
-const BGM_FADE_PER_TICK = 0.933;
+# infrastructure stuff
+const SCREENWIPE_MAX_TICKS  : int   = 60;
+const TICKS_PER_SEC         : float = 48.0;
+const MAX_VOLUME            : int   = 8;
+const BGM_FADE_PER_TICK     : float = 0.933;
 
+#file paths
 const DATA_BASE     : String = "user://below_data";
 const OPTIONS_PATH  : String = DATA_BASE + "-options";
 const SAVEGAME_PATH : String = DATA_BASE + "-savegame";
+
+# gameplay stuff
+const GRAVITY_ACCEL                 : float = 9.8 / TICKS_PER_SEC;
+const COEFF_OF_FRICTION             : float = 0.9975;
+const WALK_SPEED_ACCEL              : float = 1.6;
+const MAX_WALK_SPEED                : float = 450.0 / TICKS_PER_SEC;
+const MAX_RUN_SPEED                 : float = 850.0 / TICKS_PER_SEC;
+const JUMP_INITIAL_VERT_SPEED       : float = 4.5;
+const JUMP_HORZ_REDUCTION_FACTOR    : float = 0.29;
 
 #--- VARS ----------------------------------------------------------------------
 # configuration
@@ -102,9 +111,9 @@ func load_options_data():
             print_debug("could not open options file for reading! error code: " + str(error));
             return; 
             
-        sfx_vol = fin.get_8();
-        music_vol = fin.get_8();
-        use_joystick = fin.get_8();
+        sfx_vol         = fin.get_8();
+        music_vol       = fin.get_8();
+        use_joystick    = fin.get_8();
         fin.close();
     else:
         save_options_data();
