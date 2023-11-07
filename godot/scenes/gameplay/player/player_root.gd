@@ -82,7 +82,7 @@ func _process(_ignore):
         # is this user-commanded input or 360 stick drift?                            
         if (joy_tmp.length() > GLOBALS.STICK_DEAD_ZONE):
             # yes, looking & aiming     
-            $spatl_yrotator.rotate_y(deg2rad((180.0 * joy_tmp.x) / GLOBALS.TICKS_PER_SEC));   
+            $spatl_yrotator.rotate_y(deg2rad((-180.0 * joy_tmp.x) / GLOBALS.TICKS_PER_SEC));   
             $spatl_yrotator/spatl_xrotator.rotate_x(deg2rad((180.0 * joy_tmp.y) / GLOBALS.TICKS_PER_SEC));   
             $spatl_yrotator/spatl_xrotator.rotation.x = clamp($spatl_yrotator/spatl_xrotator.rotation.x, 
                                                             deg2rad(-MAX_LOOK_UP_DOWN), 
