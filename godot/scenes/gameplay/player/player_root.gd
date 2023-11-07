@@ -122,7 +122,7 @@ func _process(_ignore):
             vert_velocity = GLOBALS.JUMP_INITIAL_VERT_SPEED;
         
     # combine horz and vert elements, apply 'em
-    var combined_veloc : Vector3 = Vector3(horz_velocity.x, horz_velocity.y, vert_velocity);
+    var combined_veloc : Vector3 = Vector3(horz_velocity.x, vert_velocity, horz_velocity.y);
     move_and_slide(combined_veloc, Vector3.UP, true, 4, deg2rad(45), false);
     
     # whether we're on the ground may have changed - sample it again
