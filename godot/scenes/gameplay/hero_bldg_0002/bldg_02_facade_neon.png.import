@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/bldg_02_facade_neon.png-63fbdf68443403248e650426e4b93908.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://scenes/gameplay/hero_bldg_0002/bldg_02_facade_neon.png"
+dest_files=[ "res://.import/bldg_02_facade_neon.png-63fbdf68443403248e650426e4b93908.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
